@@ -272,3 +272,27 @@ Falta actualizar i (ej: i++).
 do { printf("Hola"); } while(1 == 1); // Siempre verdadero
 
 Condición siempre verdadera → bucle infinito.
+
+1.  ¿Cuál es la diferencia entre una variable y una constante en C? Da un ejemplo de cómo se declara cada una.
+
+* **Respuesta:**
+    * **Variable:** Es un espacio en memoria que almacena un dato que puede cambiar durante la ejecución del programa. Se declara especificando su tipo de dato.
+    * **Constante:** Es un valor que no cambia durante la ejecución del programa. Se define desde el inicio y su valor permanece fijo.
+* **Ejemplos de declaración:**
+    * **Variable:** `int edad = 20;`
+    * **Constante:** `const int diasSemana = 7;`  o  `#define PI 3.1416`
+    * 2.  Función main() en un programa C
+
+* **Respuesta:**
+    * `main()` es la función principal y el punto de entrada de todo programa en C.
+    * La ejecución del programa siempre comienza con la función `main()`.
+    * Es obligatoria en todo programa C.
+3.  Diferencia entre while y do-while
+
+* **Respuesta:**
+    * **`while`:**
+        * Evalúa la condición *antes* de ejecutar el bloque de código.
+        * Si la condición es falsa desde el principio, el bloque de código puede no ejecutarse nunca.
+    * **`do-while`:**
+        * Ejecuta el bloque de código *al menos una vez* y luego evalúa la condición.
+        * El bloque de código se ejecuta al menos una vez, incluso si la condición es falsa desde el principio.
