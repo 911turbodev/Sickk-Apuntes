@@ -22,7 +22,7 @@ int main()
             factorial *= i;
         }
 
-        printf("El factorial de %d es %llu\n", n, factorial);
+        printf("El factorial de %d es %d\n", n, factorial);
     }
 
     return 0;
