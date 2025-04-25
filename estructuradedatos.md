@@ -53,3 +53,16 @@ predecesores. Existen dos tipos:
 	| Grafos
 		| Se trata de una estructura matematica formada por un conjunto de puntos y un conjunto de lineas
 		| cada una de las cuales une un punto a otro.
+
+
+ARREGLOS
+
+Un arreglo se define como una coleccion finita, Homogenea y ordenada de elementos de un mismo tipo.
+
+Un Fichero o Archivo es una coleccion ordenada de datos que tienen entre si una relacion y que se almacenan
+de forma permanente en  un dispositivo de memoria no volatil
+
+STRINGS
+
+Una cadena de caractereses una secuencia ordenada de longitud finita de elementos que pertenecen
+a un ciero lenguaje formal o alfabeto analogas a una forma o a una oracion
