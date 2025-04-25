@@ -923,3 +923,217 @@ Los pasos 2-4 se repiten hasta que la condición contador <= 5 sea falsa.
 
 ## Resumen
 En resumen, la sentencia while es útil cuando se necesita repetir un bloque de código un número indeterminado de veces, dependiendo de una condición que puede cambiar durante la ejecución del bucle.
+
+## 🚨 **Errores comunes al usar `while`**
+
+### 1. **Ciclo infinito**
+
+Si la variable dentro del `while` no cambia dentro del ciclo, la condición nunca será falsa y el programa quedará atrapado en un bucle infinito.
+
+#### Ejemplo con error:
+```c
+#include <stdio.h>
+
+int main() {
+  int contador = 1;
+
+  // Error: 'contador' nunca se actualiza, el bucle es infinito
+  while (contador <= 5) {
+    printf("Número: %d\n", contador);
+    // Falta contador++;
+  }
+
+  printf("¡El programa nunca llega aquí!\n");
+
+  return 0;
+}
+```
+## Corrección:
+```
+#include <stdio.h>
+
+int main() {
+  int contador = 1;
+
+  // Corrección: Se agrega el incremento de 'contador'
+  while (contador <= 5) {
+    printf("Número: %d\n", contador);
+    contador++;
+  }
+
+  printf("El bucle ha terminado.\n");
+
+  return 0;
+}
+```
+Explicación:
+En el código con error, la variable contador se inicializa en 1, pero su valor nunca se incrementa dentro del bucle. Como resultado, la condición contador <= 5 siempre es verdadera, y el bucle se ejecuta indefinidamente. La corrección consiste en agregar la línea contador++; dentro del bucle para incrementar el valor de contador en cada iteración, lo que eventualmente hará que la condición sea falsa y termine el bucle.
+
+2. Condición incorrecta
+Asegúrate de que la condición permita al while ejecutarse al menos una vez si es necesario.
+
+Ejemplo con error:
+```
+#include <stdio.h>
+
+int main() {
+  int numero = 10;
+
+  // Error: La condición es falsa desde el principio, el bucle no se ejecuta
+  while (numero < 5) {
+    printf("Este mensaje no se mostrará.\n");
+    numero++;
+  }
+
+  printf("Fin del programa.\n");
+
+  return 0;
+}
+```
+Corrección:
+```
+#include <stdio.h>
+
+int main() {
+  int numero = 10;
+
+  // Corrección: Se cambia la condición para que el bucle se ejecute (al menos una vez si es lo deseado)
+  while (numero > 5) {
+    printf("Este mensaje se mostrará.\n");
+    numero--;
+  }
+
+  printf("Fin del programa.\n");
+
+  return 0;
+}
+```
+Explicación:
+En el código con error, la variable numero se inicializa en 10. La condición del bucle es numero < 5. Dado que 10 no es menor que 5, la condición es falsa desde el principio, y el bloque de código dentro del bucle while nunca se ejecuta. La corrección cambia la condición a numero > 5 y la actualización a numero--; para que el bucle se ejecute mientras numero sea mayor que 5.
+
+
+## Conclusión
+La principal conclusión sobre los errores en la sentencia while es la importancia de garantizar que la condición del bucle eventualmente se vuelva falsa. Esto implica dos aspectos fundamentales:
+
+Asegurar la actualización de las variables: Las variables involucradas en la condición del while deben modificarse dentro del bucle. Si no se actualizan, la condición permanecerá siempre verdadera, y el bucle se ejecutará indefinidamente (bucle infinito), lo que puede consumir recursos del sistema y hacer que el programa deje de responder.
+
+Definir correctamente la condición: La condición del while debe establecerse de manera que, bajo las circunstancias correctas, el bucle se ejecute la cantidad de veces esperada y que también se detenga cuando sea necesario. Una condición mal definida puede hacer que el bucle no se ejecute nunca o que se ejecute un número incorrecto de veces.
+
+## Resumen
+En resumen, para evitar errores en la sentencia while, se debe prestar mucha atención a la lógica del bucle, asegurando que las variables se actualicen adecuadamente y que la condición esté definida de forma precisa para lograr el comportamiento deseado del programa.
+
+
+
+## Sentencia `do-while` en C
+
+La sentencia `do-while` es una estructura de control de flujo en C que ejecuta un bloque de código al menos una vez y luego sigue ejecutándolo mientras una condición sea verdadera.
+
+### Características clave:
+
+- A diferencia del `while`, donde primero se evalúa la condición antes de ejecutar el código, en `do-while` el código se ejecuta al menos una vez antes de comprobar la condición.
+
+### Sintaxis de la Sentencia `do-while`
+
+```c
+do {
+  // Código a ejecutar al menos una vez
+} while (condición);
+```
+do: La palabra clave do inicia el bloque de código que se ejecutará al menos una vez.
+
+{ }: Las llaves definen el bloque de código que se ejecutará.
+
+while (condición);: La palabra clave while seguida de la condición entre paréntesis y un punto y coma al final. La condición se evalúa después de la primera ejecución del bloque de código, y si es verdadera, el bloque de código se ejecuta de nuevo. Este proceso se repite hasta que la condición sea falsa.
+
+## Ejemplo de do-while:
+
+#include <stdio.h>
+```
+int main() {
+  int numero;
+
+  do {
+    printf("Ingrese un número mayor que 10: ");
+    scanf("%d", &numero);
+    // El código dentro del 'do' se ejecuta al menos una vez.
+    // Se muestra un mensaje y se pide al usuario un número.
+  } while (numero <= 10);
+  // Si el número es menor o igual a 10, se repite el proceso.
+
+  printf("¡Número válido ingresado: %d!\n", numero);
+  // Si el número es mayor a 10, el bucle termina y se muestra el mensaje final.
+
+  return 0;
+}
+```
+Explicación del Ejemplo:
+Declaración: Se declara la variable numero.
+
+Bloque do:
+
+Se muestra un mensaje solicitando al usuario que ingrese un número mayor que 10.
+
+Se lee el número ingresado por el usuario y se almacena en la variable numero.
+
+Condición while: Se evalúa si numero es menor o igual a 10.
+
+Si la condición es verdadera, el bloque do se ejecuta de nuevo.
+
+Si la condición es falsa (es decir, numero es mayor que 10), el bucle do-while termina y se continúa con la siguiente instrucción después del bucle.
+
+### 🆚 Diferencia entre `while` y `do-while`
+
+| Característica                | `while`                                                                 | `do-while`                                                                    |
+| :---------------------------- | :---------------------------------------------------------------------- | :---------------------------------------------------------------------------- |
+| ¿Cuándo se evalúa la condición? | **Antes** de entrar al bucle                                            | **Después** de ejecutar el bloque                                             |
+| ¿Se ejecuta al menos una vez?  | **No**, si la condición es `false` desde el inicio, nunca entra al ciclo | **Sí**, siempre se ejecuta al menos una vez                                   |
+| Uso recomendado               | Cuando puede ser que el bloque **nunca se ejecute** | Cuando se necesita que el bloque se **ejecute al menos una vez** |
+| Ejemplo comparativo           | ```c                                                                 | ```c                                                                        |
+|                               | // Usando while                                                       | // Usando do-while                                                          |
+|                               | int x = 5;                                                            | int y = 5;                                                                  |
+|                               | while (x > 10) {                                                      | do {                                                                        |
+|                               |   printf("Esto no se imprimirá\\n");                                 |   printf("Esto se imprimirá al menos una vez\\n");                             |
+|                               | }                                                                     | } while (y > 10);                                                           |
+
+## Resumen
+La sentencia do-while es útil cuando se necesita garantizar que un bloque de código se ejecute al menos una vez, y luego se repita la ejecución según una condición.
+
+## Errores comunes con `do-while`
+
+Un error común con la sentencia `do-while` es:
+
+### 1. Olvidar la actualización de la variable de control
+
+Si la variable de control no se modifica dentro del bucle `do-while`, la condición del bucle puede permanecer siempre verdadera, lo que lleva a un bucle infinito. Esto significa que el bloque de código dentro del bucle se ejecutará repetidamente sin fin, lo que puede hacer que el programa se bloquee o consuma recursos excesivos.
+
+#### Ejemplo de error:
+
+```c
+int i = 1;
+do {
+  printf("%d\n", i);
+} while (i <= 5); // ¡Ciclo infinito porque i nunca cambia!
+```
+Solución:
+```
+#include <stdio.h>
+
+int main() {
+  int i = 1;
+
+  do {
+    printf("%d\n", i);
+    i++; // Se agrega la actualización de la variable 'i'
+  } while (i <= 5);
+
+  return 0;
+}
+```
+Explicación de la solución:
+
+El error en el código original es que la variable de control i nunca se incrementa dentro del bucle do-while. Esto significa que la condición i <= 5 siempre se evalúa como verdadera, lo que resulta en un bucle infinito.
+
+La solución es agregar la línea i++; dentro del bloque de código del bucle do-while. Esta línea incrementa el valor de i en 1 en cada iteración, lo que eventualmente hará que la condición i <= 5 se vuelva falsa y el bucle termine.
+
+## Conclusión:
+Es crucial asegurarse de que todas las variables de control se actualicen correctamente dentro de los bucles para garantizar que terminen en algún momento y el programa funcione como se espera.
