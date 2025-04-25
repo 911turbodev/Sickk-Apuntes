@@ -474,6 +474,7 @@ En esta unidad, exploraremos las **sentencias de control** y de **iteración** e
 ---
 
 ## 🤖 **¿Por qué son importantes las Sentencias de Control?**
+Las sentencias de control son esenciales porque permiten dirigir el flujo de ejecución del programa, tomar decisiones (como con if o switch), repetir acciones (usando for, while), y manejar errores. Sin ellas, los programas serían estáticos y no podrían adaptarse a diferentes situaciones ni ser eficientes.
 
 Imagina un programa que solo puede ejecutar instrucciones en una secuencia fija. Sería como un robot que solo sabe seguir una lista de pasos, sin importar el contexto. Las sentencias de control cambian esto, permitiendo que el programa **"piense"** y actúe de manera diferente según las circunstancias.
 
