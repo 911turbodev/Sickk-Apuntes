@@ -174,76 +174,101 @@ Incluye la librería estándar para operaciones de entrada/salida (ej: printf, s
 
 ## Sección 5: Variables vs. Constantes
 
-Diferencia entre variable y constante
+## Diferencia entre variable y constante
+
 Variable: valor modificable. Constante: valor fijo (se declara con const o #define).
 
-Ejemplo de constante con #define
+## Ejemplo de constante con #define
 
 #define PI 3.1416
 Ventajas de usar constantes
 Mejoran legibilidad, evitan errores y facilitan mantenimiento.
 
-Sección 6: Operaciones de Salida
-Función para imprimir en pantalla en C
+## Sección 6: Operaciones de Salida
+
+## Función para imprimir en pantalla en C
+
 printf().
 
-Especificadores de formato comunes
+## Especificadores de formato comunes
+
 %d (entero), %f (float), %c (char), %s (cadena).
 
-¿Cómo imprimir un salto de línea?
+## ¿Cómo imprimir un salto de línea?
+
 Usar \n dentro de printf().
 
-Ejemplo de printf con formato
+## Ejemplo de printf con formato
 
 printf("El valor es: %.2f", 3.1416); // Imprime con 2 decimales.
-Sección 7: Estructuras de Control
-Diferencia entre if y switch
+
+## Sección 7: Estructuras de Control
+
+## Diferencia entre if y switch
+
 if: evalúa condiciones booleanas. switch: compara valores específicos.
 
-Sintaxis de un for
+## Sintaxis de un for
 
 for(inicialización; condición; actualización) { ... }
+
 Error común en bucles while
+
 Bucle infinito por no actualizar la variable de condición.
 
-¿Cuándo usar do-while en lugar de while?
+## ¿Cuándo usar do-while en lugar de while?
+
 Cuando el bloque debe ejecutarse al menos una vez.
 
-Sección 8: Ejemplos Prácticos
-¿Qué hace este código?
+## Sección 8: Ejemplos Prácticos
+
+## ¿Qué hace este código?
 
 int i = 1;
 while(i <= 5) { printf("%d", i); i++; }
+
 Imprime números del 1 al 5.
 
-Corregir este código:
+## Corregir este código:
 
 float x;
+
 printf("Ingrese un número: ");
+
 scanf("%f", x); // Error: falta &
+
 Corrección: scanf("%f", &x);.
 
-Programa que verifique si un número es positivo
+## Programa que verifique si un número es positivo
 
 if(num > 0) printf("Positivo");
+
 else printf("Negativo o cero");
+
 Sección 9: Conceptos Avanzados
-¿Qué es un puntero en C?
+
+## ¿Qué es un puntero en C?
+
 Variable que almacena direcciones de memoria.
 
-¿Cómo se declara una función en C?
+## ¿Cómo se declara una función en C?
 
 tipo nombreFuncion(parámetros) { ... }
-Ejemplo de función que suma dos números
+
+## Ejemplo de función que suma dos números
 
 int suma(int a, int b) { return a + b; }
-Sección 10: Errores Comunes
-¿Por qué este for es infinito?
+
+## Sección 10: Errores Comunes
+
+## ¿Por qué este for es infinito?
 
 for(int i = 0; i < 5;) { printf("%d", i); }
+
 Falta actualizar i (ej: i++).
 
-Error en este do-while
+## Error en este do-while
 
 do { printf("Hola"); } while(1 == 1); // Siempre verdadero
+
 Condición siempre verdadera → bucle infinito.
