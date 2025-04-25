@@ -1133,6 +1133,10 @@ Explicación de la solución:
 
 El error en el código original es que la variable de control i nunca se incrementa dentro del bucle do-while. Esto significa que la condición i <= 5 siempre se evalúa como verdadera, lo que resulta en un bucle infinito.
 
+La solución es agregar la línea i++; dentro del bloque de código del bucle do-while. Esta línea incrementa el valor de i en 1 en cada iteración, lo que eventualmente hará que la condición i <= 5 se vuelva falsa y el bucle termine.
+
+## Conclusión:
+Es crucial asegurarse de que todas las variables de control se actualicen correctamente dentro de los bucles para garantizar que terminen en algún momento y el programa funcione como se espera.
 
 
 
@@ -1203,7 +1207,3 @@ Una **variable** es un espacio en la memoria de la computadora destinado a ser u
 El tipo de dato asignado a una variable tiene relevancia porque si estamos creando una variable de tipo entero, solo podrá guardar valores enteros. Si intentamos guardarle un número con coma, dependiendo del lenguaje o de la operación, podría dar error o redondear el valor, dejando solo la parte entera. Lo ideal es que cada variable sea utilizada según su tipo de dato correspondiente.
 
 
-La solución es agregar la línea i++; dentro del bloque de código del bucle do-while. Esta línea incrementa el valor de i en 1 en cada iteración, lo que eventualmente hará que la condición i <= 5 se vuelva falsa y el bucle termine.
-
-## Conclusión:
-Es crucial asegurarse de que todas las variables de control se actualicen correctamente dentro de los bucles para garantizar que terminen en algún momento y el programa funcione como se espera.
