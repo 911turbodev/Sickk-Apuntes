@@ -1133,6 +1133,76 @@ Explicación de la solución:
 
 El error en el código original es que la variable de control i nunca se incrementa dentro del bucle do-while. Esto significa que la condición i <= 5 siempre se evalúa como verdadera, lo que resulta en un bucle infinito.
 
+
+
+
+
+# Introducción
+
+La programación es una disciplina (de tantas hoy en día) que pertenece a la informática, ciencia que se dedica al análisis y transformación de datos e información a partir del uso de computadoras.
+
+En dicha disciplina se desarrollan algoritmos en un determinado lenguaje de programación, los cuales serán implementados en una computadora para de esa manera realizar los llamados programas.
+
+## Algoritmo
+
+Un algoritmo es una secuencia finita y ordenada de instrucciones que deben ser seguidas en pos de resolver un problema.
+
+## Programa
+
+Un programa es, técnicamente hablando, uno o más (al menos uno) algoritmos de programación escrito en un lenguaje que puede ser interpretado y ejecutado por una computadora. En otras palabras, decimos que un programa es la solución a un problema, ya que cada vez que se requiere desde sumar números hasta realizar traducciones, grandes cálculos o enviar mensajes de texto, se recurre a un programa (o aplicación, o web, lo que corresponda).
+
+Existen distintos tipos de programas o aplicaciones (podemos decir que son sinónimos), por ejemplo:
+
+- **Programas de escritorio**: Se ejecutan en Windows, por ejemplo Word, Excel, el buscaminas.
+- **Programas web**: Facebook, Mercado Libre, son aplicaciones o sistemas web.
+- **Programas de celular**: También llamados apps, o aplicaciones, por ejemplo Whatsapp, Instagram, Google Maps.
+
+Todos estos son parte de un gran grupo dentro de la informática que se denomina **Software**.
+
+## Sistema Informático
+
+El sistema informático está compuesto necesariamente por tres partes:
+
+- **Hardware**
+- **Software**
+- **Humano**
+
+Ante la ausencia de alguna de estas partes, no podríamos completar el sistema y este no tendría sentido dado que:
+
+- **Software** es todo lo que creamos para que una computadora funcione, pero requiere justamente una computadora donde hacerlo, ahí entra el **Hardware**.
+- **Hardware** es “todo lo que se puede tocar” en una computadora: el monitor, el teclado, incluso todos los componentes internos dentro de la misma. 
+- **Humano**: Se completa el ciclo con el humano, quien hace uso de ese Software gracias a ese Hardware, y aunque parezca obvio, es clave tener en cuenta este círculo.
+
+### Categorías del Software
+
+Existen distintas categorizaciones dentro del software. Las más comunes son:
+
+- **Software de base**: Corresponde a las cuestiones básicas y de sistema operativo que se requiere para poder encender y usar una computadora (Windows, Linux, Mac OS, Android, iOS).
+- **Software utilitarios**: Son aplicaciones complementarias para el correcto funcionamiento y/o administración de los sistemas. Podemos hablar del desfragmentador de disco, o utilidades de análisis de errores en memoria, entre otros.
+- **Software de aplicación**: Los programas, sistemas o aplicaciones que utilizamos a diario.
+
+Existen más categorías y sub-categorías, además de ciertas características adicionales como si son libres, o no, o si son open source, o multiplataforma, pero eso es para indagar en otro contexto.
+
+También podemos mencionar los “programas para programar”. Hoy en día, para poder desarrollar programas, necesitamos una computadora, pero además uno o más programas diseñados específicamente para ello, conocidos como **IDE** (Entorno de Desarrollo Integrado).
+
+Dependiendo de lo que quisiéramos programar, será la aplicación que deberíamos utilizar, y esto aplica del mismo modo para la tecnología o lenguaje de programación a utilizar.
+
+## Tipos de datos
+
+Al programar, no solo tenemos que escribir en un lenguaje determinado, sino que utilizaremos herramientas como las **variables**.
+
+Una **variable** es un espacio en la memoria de la computadora destinado a ser utilizado por nuestro programa para guardar un dato. La variable tiene ciertas características, como que debe contar con un nombre, que puede guardar un solo dato a la vez (el cual puede ir cambiando), y que debe tener un tipo. Este tipo se refiere a qué es lo que precisamente va a guardar esa variable. Los tipos más comunes son:
+
+- **Int**: Para guardar números enteros.
+- **Float** o **double**: Para guardar números con coma (dependiendo del lenguaje, hay otras variantes).
+- **Char**: Para guardar letras.
+- **Bool**: Para guardar verdadero o falso (equivalente a 1 o 0, respectivamente).
+
+### Importancia del tipo de dato
+
+El tipo de dato asignado a una variable tiene relevancia porque si estamos creando una variable de tipo entero, solo podrá guardar valores enteros. Si intentamos guardarle un número con coma, dependiendo del lenguaje o de la operación, podría dar error o redondear el valor, dejando solo la parte entera. Lo ideal es que cada variable sea utilizada según su tipo de dato correspondiente.
+
+
 La solución es agregar la línea i++; dentro del bloque de código del bucle do-while. Esta línea incrementa el valor de i en 1 en cada iteración, lo que eventualmente hará que la condición i <= 5 se vuelva falsa y el bucle termine.
 
 ## Conclusión:
